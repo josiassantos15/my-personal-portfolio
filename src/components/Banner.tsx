@@ -11,9 +11,9 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Web Developer" ];
+  const toRotate = [ "Web Developer", "IT teacher" ];
   const period = 2000;
-  const yearsOld = new Date().getFullYear() - 1999;
+  const yearsOld = new Date().getFullYear() - 1994;
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -57,9 +57,8 @@ export const Banner = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hi! I'm Madson`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer" ]'><span className="wrap">{text}</span></span></h1>
-                  {/* <p> I am {`${yearsOld}`} years old, graduated in Computer Science from the Federal Institute of Pará (IFPA). I currently work as a developer and I am studying for a postgraduate course in Informatics and education. I seek to improve my knowledge in Programming to help people, solve real problems and become a recognized professional. I seek to learn more and help those who need it too.</p> */}
-                  <p> I am {`${yearsOld}`} years old, graduated in Information Systems from the Federal University of Pará (UFPA). Currently working as a web developer and as SAP b1 support. I seek to improve my knowledge in Programming to help people, solve real problems and become a recognized professional. I try to learn more and help those in need too.</p>
+                <h1>{`Hi! I'm Josias`} <span className="txt-rotate" data-period="2000" data-rotate='[ "Web Developer", "IT teacher" ]'><span className="wrap">{text}</span></span></h1>
+                  <p> I am {`${yearsOld}`} years old, graduated in Computer Science from the Federal Institute of Pará (IFPA). I currently work as a Web Developer and I am studying for a postgraduate course in Informatics and education. I seek to improve my knowledge in Programming to help people, solve real problems and become a recognized professional. I seek to learn more and help those who need it too.</p>
               </div>}
             </TrackVisibility>
           </Col>
